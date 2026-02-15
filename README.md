@@ -7,7 +7,6 @@
 [![C++17](https://img.shields.io/badge/C%2B%2B-17-blue.svg?style=flat-square&logo=cplusplus)](https://isocpp.org/)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-yellow.svg?style=flat-square&logo=python)](https://www.python.org/)
 [![Eigen3](https://img.shields.io/badge/Eigen-3.4-green.svg?style=flat-square)](https://eigen.tuxfamily.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=flat-square)](LICENSE)
 
 *A high-performance implementation of Hébert's dual variational formulation using Raviart-Thomas (RTₖ) and discontinuous Legendre (Pₘ) finite elements for nuclear reactor physics.*
 
