@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fafbfc"/>
+      <stop offset="100%" style="stop-color:#edf2f7"/>
+    </linearGradient>
+    <filter id="shadowLight" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <rect width="900" height="550" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Georgia, serif" font-size="24" fill="#1a365d" text-anchor="middle" font-weight="bold">Raviart-Thomas RTₖ — Legendre Pₘ Finite Elements</text>
+  
+  <!-- RT0 Element -->
+  <g transform="translate(50, 70)">
+    <rect width="250" height="200" rx="8" fill="white" filter="url(#shadowLight)" stroke="#e2e8f0"/>
+    <rect width="250" height="35" rx="8" fill="#3182ce"/>
+    <text x="125" y="24" font-family="Segoe UI, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600">RT₀ Element</text>
+    
+    <!-- 2D cell -->
+    <rect x="60" y="55" width="130" height="130" fill="#ebf8ff" stroke="#3182ce" stroke-width="2"/>
+    
+    <!-- Face normals -->
+    <line x1="125" y1="55" x2="125" y2="30" stroke="#e53e3e" stroke-width="2" marker-end="url(#arrowRed)"/>
+    <line x1="125" y1="185" x2="125" y2="210" stroke="#e53e3e" stroke-width="2"/>
+    <line x1="60" y1="120" x2="35" y2="120" stroke="#e53e3e" stroke-width="2"/>
+    <line x1="190" y1="120" x2="215" y2="120" stroke="#e53e3e" stroke-width="2"/>
+    
+    <!-- Face DOFs (circles) -->
+    <circle cx="125" cy="55" r="6" fill="#e53e3e"/>
+    <circle cx="125" cy="185" r="6" fill="#e53e3e"/>
+    <circle cx="60" cy="120" r="6" fill="#e53e3e"/>
+    <circle cx="190" cy="120" r="6" fill="#e53e3e"/>
+    
+    <!-- Labels -->
+    <text x="125" y="240" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">1 DOF/face (normal flux)</text>
+    <text x="125" y="255" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">4 DOFs total (2D)</text>
+  </g>
+  
+  <!-- RT1 Element -->
+  <g transform="translate(325, 70)">
+    <rect width="250" height="200" rx="8" fill="white" filter="url(#shadowLight)" stroke="#e2e8f0"/>
+    <rect width="250" height="35" rx="8" fill="#38a169"/>
+    <text x="125" y="24" font-family="Segoe UI, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600">RT₁ Element</text>
+    
+    <!-- 2D cell -->
+    <rect x="60" y="55" width="130" height="130" fill="#f0fff4" stroke="#38a169" stroke-width="2"/>
+    
+    <!-- Face DOFs (2 per face) -->
+    <circle cx="100" cy="55" r="5" fill="#e53e3e"/>
+    <circle cx="150" cy="55" r="5" fill="#e53e3e"/>
+    <circle cx="100" cy="185" r="5" fill="#e53e3e"/>
+    <circle cx="150" cy="185" r="5" fill="#e53e3e"/>
+    <circle cx="60" cy="95" r="5" fill="#e53e3e"/>
+    <circle cx="60" cy="145" r="5" fill="#e53e3e"/>
+    <circle cx="190" cy="95" r="5" fill="#e53e3e"/>
+    <circle cx="190" cy="145" r="5" fill="#e53e3e"/>
+    
+    <!-- Interior bubbles -->
+    <circle cx="105" cy="100" r="5" fill="#805ad5"/>
+    <circle cx="145" cy="100" r="5" fill="#805ad5"/>
+    <circle cx="105" cy="140" r="5" fill="#805ad5"/>
+    <circle cx="145" cy="140" r="5" fill="#805ad5"/>
+    
+    <!-- Labels -->
+    <text x="125" y="240" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">2 DOF/face + 4 bubbles</text>
+    <text x="125" y="255" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">12 DOFs total (2D)</text>
+  </g>
+  
+  <!-- RT2 Element -->
+  <g transform="translate(600, 70)">
+    <rect width="250" height="200" rx="8" fill="white" filter="url(#shadowLight)" stroke="#e2e8f0"/>
+    <rect width="250" height="35" rx="8" fill="#d69e2e"/>
+    <text x="125" y="24" font-family="Segoe UI, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600">RT₂ Element</text>
+    
+    <!-- 2D cell -->
+    <rect x="60" y="55" width="130" height="130" fill="#fffff0" stroke="#d69e2e" stroke-width="2"/>
+    
+    <!-- Face DOFs (3 per face) -->
+    <circle cx="85" cy="55" r="4" fill="#e53e3e"/>
+    <circle cx="125" cy="55" r="4" fill="#e53e3e"/>
+    <circle cx="165" cy="55" r="4" fill="#e53e3e"/>
+    <circle cx="85" cy="185" r="4" fill="#e53e3e"/>
+    <circle cx="125" cy="185" r="4" fill="#e53e3e"/>
+    <circle cx="165" cy="185" r="4" fill="#e53e3e"/>
+    <circle cx="60" cy="85" r="4" fill="#e53e3e"/>
+    <circle cx="60" cy="120" r="4" fill="#e53e3e"/>
+    <circle cx="60" cy="155" r="4" fill="#e53e3e"/>
+    <circle cx="190" cy="85" r="4" fill="#e53e3e"/>
+    <circle cx="190" cy="120" r="4" fill="#e53e3e"/>
+    <circle cx="190" cy="155" r="4" fill="#e53e3e"/>
+    
+    <!-- Interior bubbles (8) -->
+    <circle cx="95" cy="90" r="4" fill="#805ad5"/>
+    <circle cx="125" cy="90" r="4" fill="#805ad5"/>
+    <circle cx="155" cy="90" r="4" fill="#805ad5"/>
+    <circle cx="95" cy="120" r="4" fill="#805ad5"/>
+    <circle cx="155" cy="120" r="4" fill="#805ad5"/>
+    <circle cx="95" cy="150" r="4" fill="#805ad5"/>
+    <circle cx="125" cy="150" r="4" fill="#805ad5"/>
+    <circle cx="155" cy="150" r="4" fill="#805ad5"/>
+    
+    <!-- Labels -->
+    <text x="125" y="240" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">3 DOF/face + 8 bubbles</text>
+    <text x="125" y="255" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">20 DOFs total (2D)</text>
+  </g>
+  
+  <!-- P0 Element -->
+  <g transform="translate(50, 300)">
+    <rect width="250" height="200" rx="8" fill="white" filter="url(#shadowLight)" stroke="#e2e8f0"/>
+    <rect width="250" height="35" rx="8" fill="#718096"/>
+    <text x="125" y="24" font-family="Segoe UI, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600">P₀ (Constant)</text>
+    
+    <rect x="60" y="55" width="130" height="100" fill="#f7fafc" stroke="#718096" stroke-width="2"/>
+    <circle cx="125" cy="105" r="8" fill="#2d3748"/>
+    
+    <text x="125" y="180" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">φ(x,y) = c₀</text>
+    <text x="125" y="200" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">1 DOF/element</text>
+  </g>
+  
+  <!-- P1 Element -->
+  <g transform="translate(325, 300)">
+    <rect width="250" height="200" rx="8" fill="white" filter="url(#shadowLight)" stroke="#e2e8f0"/>
+    <rect width="250" height="35" rx="8" fill="#667eea"/>
+    <text x="125" y="24" font-family="Segoe UI, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600">P₁ (Linear)</text>
+    
+    <rect x="60" y="55" width="130" height="100" fill="#ebf4ff" stroke="#667eea" stroke-width="2"/>
+    <circle cx="80" cy="75" r="6" fill="#4c51bf"/>
+    <circle cx="170" cy="75" r="6" fill="#4c51bf"/>
+    <circle cx="80" cy="135" r="6" fill="#4c51bf"/>
+    <circle cx="170" cy="135" r="6" fill="#4c51bf"/>
+    
+    <text x="125" y="180" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">φ = c₀ + c₁x + c₂y + c₃xy</text>
+    <text x="125" y="200" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">4 DOFs/element (2D)</text>
+  </g>
+  
+  <!-- P2 Element -->
+  <g transform="translate(600, 300)">
+    <rect width="250" height="200" rx="8" fill="white" filter="url(#shadowLight)" stroke="#e2e8f0"/>
+    <rect width="250" height="35" rx="8" fill="#9f7aea"/>
+    <text x="125" y="24" font-family="Segoe UI, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600">P₂ (Quadratic)</text>
+    
+    <rect x="60" y="55" width="130" height="100" fill="#faf5ff" stroke="#9f7aea" stroke-width="2"/>
+    <!-- 9 nodes -->
+    <circle cx="80" cy="70" r="5" fill="#6b46c1"/>
+    <circle cx="125" cy="70" r="5" fill="#6b46c1"/>
+    <circle cx="170" cy="70" r="5" fill="#6b46c1"/>
+    <circle cx="80" cy="105" r="5" fill="#6b46c1"/>
+    <circle cx="125" cy="105" r="5" fill="#6b46c1"/>
+    <circle cx="170" cy="105" r="5" fill="#6b46c1"/>
+    <circle cx="80" cy="140" r="5" fill="#6b46c1"/>
+    <circle cx="125" cy="140" r="5" fill="#6b46c1"/>
+    <circle cx="170" cy="140" r="5" fill="#6b46c1"/>
+    
+    <text x="125" y="180" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">φ = Σᵢⱼ cᵢⱼ Pᵢ(ξ)Pⱼ(η)</text>
+    <text x="125" y="200" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">9 DOFs/element (2D)</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 510)">
+    <circle cx="10" cy="10" r="6" fill="#e53e3e"/>
+    <text x="25" y="14" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568">Face DOFs (normal flux)</text>
+    
+    <circle cx="180" cy="10" r="6" fill="#805ad5"/>
+    <text x="195" y="14" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568">Interior bubbles</text>
+    
+    <circle cx="350" cy="10" r="6" fill="#2d3748"/>
+    <text x="365" y="14" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568">Scalar flux DOFs (Legendre)</text>
+    
+    <text x="580" y="14" font-family="Segoe UI, sans-serif" font-size="11" fill="#718096" font-style="italic">Inf-sup stable: k ≥ m required</text>
+  </g>
+</svg>

@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <defs>
+    <linearGradient id="bgBench" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadowDark" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  
+  <rect width="900" height="450" fill="url(#bgBench)"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#2a3a5e" stroke-width="0.5"/>
+  </pattern>
+  <rect width="900" height="450" fill="url(#grid)" opacity="0.5"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Segoe UI, sans-serif" font-size="24" fill="#e2e8f0" text-anchor="middle" font-weight="600">🔬 Validation Benchmarks</text>
+  
+  <!-- IAEA 2D -->
+  <g transform="translate(50, 70)" filter="url(#shadowDark)">
+    <rect width="380" height="160" rx="12" fill="#0d1b2a" stroke="#00b4d8" stroke-width="2"/>
+    <rect width="380" height="40" rx="12" fill="#00b4d8"/>
+    <rect y="145" width="380" height="15" rx="0 0 12 12" fill="#00b4d8" opacity="0.3"/>
+    
+    <text x="20" y="28" font-family="Segoe UI, sans-serif" font-size="16" fill="white" font-weight="600">🌐 IAEA 2D PWR Benchmark</text>
+    
+    <!-- Core pattern (simplified) -->
+    <g transform="translate(20, 55)">
+      <rect width="100" height="100" fill="#1a2744" rx="4"/>
+      <!-- Core cells -->
+      <rect x="10" y="10" width="12" height="12" fill="#00b4d8" opacity="0.3"/>
+      <rect x="25" y="10" width="12" height="12" fill="#00b4d8" opacity="0.5"/>
+      <rect x="40" y="10" width="12" height="12" fill="#00b4d8" opacity="0.7"/>
+      <rect x="55" y="10" width="12" height="12" fill="#00b4d8" opacity="0.9"/>
+      <rect x="70" y="10" width="12" height="12" fill="#00b4d8" opacity="0.7"/>
+      
+      <rect x="10" y="25" width="12" height="12" fill="#00b4d8" opacity="0.5"/>
+      <rect x="25" y="25" width="12" height="12" fill="#00b4d8" opacity="0.8"/>
+      <rect x="40" y="25" width="12" height="12" fill="#00b4d8"/>
+      <rect x="55" y="25" width="12" height="12" fill="#00b4d8"/>
+      <rect x="70" y="25" width="12" height="12" fill="#00b4d8" opacity="0.8"/>
+      
+      <rect x="10" y="40" width="12" height="12" fill="#00b4d8" opacity="0.7"/>
+      <rect x="25" y="40" width="12" height="12" fill="#00b4d8"/>
+      <rect x="40" y="40" width="12" height="12" fill="#ffd700" opacity="0.8"/>
+      <rect x="55" y="40" width="12" height="12" fill="#00b4d8"/>
+      <rect x="70" y="40" width="12" height="12" fill="#00b4d8" opacity="0.7"/>
+      
+      <rect x="10" y="55" width="12" height="12" fill="#00b4d8" opacity="0.5"/>
+      <rect x="25" y="55" width="12" height="12" fill="#00b4d8" opacity="0.8"/>
+      <rect x="40" y="55" width="12" height="12" fill="#00b4d8"/>
+      <rect x="55" y="55" width="12" height="12" fill="#00b4d8"/>
+      <rect x="70" y="55" width="12" height="12" fill="#00b4d8" opacity="0.8"/>
+      
+      <rect x="25" y="70" width="12" height="12" fill="#00b4d8" opacity="0.3"/>
+      <rect x="40" y="70" width="12" height="12" fill="#00b4d8" opacity="0.5"/>
+      <rect x="55" y="70" width="12" height="12" fill="#00b4d8" opacity="0.3"/>
+    </g>
+    
+    <text x="140" y="75" font-family="Consolas, monospace" font-size="11" fill="#90e0ef">19×19 assemblies</text>
+    <text x="140" y="95" font-family="Consolas, monospace" font-size="11" fill="#90e0ef">2 energy groups</text>
+    <text x="140" y="115" font-family="Consolas, monospace" font-size="11" fill="#90e0ef">k<tspan baseline-shift="sub" font-size="8">ref</tspan> = 1.029585</text>
+    <text x="140" y="135" font-family="Segoe UI, sans-serif" font-size="10" fill="#caf0f8">4 fuel + 1 reflector zones</text>
+  </g>
+  
+  <!-- IAEA 3D -->
+  <g transform="translate(470, 70)" filter="url(#shadowDark)">
+    <rect width="380" height="160" rx="12" fill="#0d1b2a" stroke="#48cae4" stroke-width="2"/>
+    <rect width="380" height="40" rx="12" fill="#48cae4"/>
+    <rect y="145" width="380" height="15" rx="0 0 12 12" fill="#48cae4" opacity="0.3"/>
+    
+    <text x="20" y="28" font-family="Segoe UI, sans-serif" font-size="16" fill="white" font-weight="600">📦 IAEA 3D PWR Benchmark</text>
+    
+    <!-- 3D cube representation -->
+    <g transform="translate(20, 55)">
+      <polygon points="50,0 100,25 100,85 50,110 0,85 0,25" fill="#1a2744" stroke="#48cae4" stroke-width="1"/>
+      <polygon points="50,0 100,25 50,50 0,25" fill="#48cae4" opacity="0.3" stroke="#48cae4"/>
+      <polygon points="100,25 100,85 50,110 50,50" fill="#48cae4" opacity="0.2" stroke="#48cae4"/>
+      <!-- Axial layers -->
+      <line x1="0" y1="45" x2="50" y2="70" stroke="#48cae4" stroke-width="0.5" opacity="0.5"/>
+      <line x1="50" y1="70" x2="100" y2="45" stroke="#48cae4" stroke-width="0.5" opacity="0.5"/>
+      <line x1="0" y1="65" x2="50" y2="90" stroke="#48cae4" stroke-width="0.5" opacity="0.5"/>
+      <line x1="50" y1="90" x2="100" y2="65" stroke="#48cae4" stroke-width="0.5" opacity="0.5"/>
+    </g>
+    
+    <text x="140" y="75" font-family="Consolas, monospace" font-size="11" fill="#90e0ef">19×19×19 mesh</text>
+    <text x="140" y="95" font-family="Consolas, monospace" font-size="11" fill="#90e0ef">2 energy groups</text>
+    <text x="140" y="115" font-family="Consolas, monospace" font-size="11" fill="#90e0ef">k<tspan baseline-shift="sub" font-size="8">ref</tspan> = 1.029096</text>
+    <text x="140" y="135" font-family="Segoe UI, sans-serif" font-size="10" fill="#caf0f8">Control rod insertion</text>
+  </g>
+  
+  <!-- BIBLIS 2D -->
+  <g transform="translate(50, 255)" filter="url(#shadowDark)">
+    <rect width="380" height="160" rx="12" fill="#0d1b2a" stroke="#7209b7" stroke-width="2"/>
+    <rect width="380" height="40" rx="12" fill="#7209b7"/>
+    <rect y="145" width="380" height="15" rx="0 0 12 12" fill="#7209b7" opacity="0.3"/>
+    
+    <text x="20" y="28" font-family="Segoe UI, sans-serif" font-size="16" fill="white" font-weight="600">⚛️ BIBLIS 2D Benchmark</text>
+    
+    <!-- Core pattern -->
+    <g transform="translate(20, 55)">
+      <rect width="100" height="100" fill="#1a2744" rx="4"/>
+      <circle cx="50" cy="50" r="40" fill="none" stroke="#7209b7" stroke-width="1"/>
+      <circle cx="50" cy="50" r="30" fill="#7209b7" opacity="0.3"/>
+      <circle cx="50" cy="50" r="20" fill="#7209b7" opacity="0.5"/>
+      <circle cx="50" cy="50" r="10" fill="#7209b7" opacity="0.7"/>
+      <!-- Control rods -->
+      <rect x="25" y="25" width="6" height="6" fill="#f72585"/>
+      <rect x="45" y="25" width="6" height="6" fill="#f72585"/>
+      <rect x="65" y="25" width="6" height="6" fill="#f72585"/>
+      <rect x="25" y="45" width="6" height="6" fill="#f72585"/>
+      <rect x="65" y="45" width="6" height="6" fill="#f72585"/>
+    </g>
+    
+    <text x="140" y="75" font-family="Consolas, monospace" font-size="11" fill="#d8b4fe">17×17 assemblies</text>
+    <text x="140" y="95" font-family="Consolas, monospace" font-size="11" fill="#d8b4fe">2 energy groups</text>
+    <text x="140" y="115" font-family="Consolas, monospace" font-size="11" fill="#d8b4fe">k<tspan baseline-shift="sub" font-size="8">ref</tspan> = 1.02511</text>
+    <text x="140" y="135" font-family="Segoe UI, sans-serif" font-size="10" fill="#e9d5ff">8 material regions</text>
+  </g>
+  
+  <!-- KOEBERG 2D -->
+  <g transform="translate(470, 255)" filter="url(#shadowDark)">
+    <rect width="380" height="160" rx="12" fill="#0d1b2a" stroke="#f77f00" stroke-width="2"/>
+    <rect width="380" height="40" rx="12" fill="#f77f00"/>
+    <rect y="145" width="380" height="15" rx="0 0 12 12" fill="#f77f00" opacity="0.3"/>
+    
+    <text x="20" y="28" font-family="Segoe UI, sans-serif" font-size="16" fill="white" font-weight="600">🔥 KOEBERG 2D (4 Groups)</text>
+    
+    <!-- Core pattern -->
+    <g transform="translate(20, 55)">
+      <rect width="100" height="100" fill="#1a2744" rx="4"/>
+      <!-- Multi-zone core -->
+      <rect x="20" y="20" width="60" height="60" fill="#f77f00" opacity="0.6" rx="2"/>
+      <rect x="30" y="30" width="40" height="40" fill="#f77f00" opacity="0.8" rx="2"/>
+      <rect x="40" y="40" width="20" height="20" fill="#f77f00" rx="2"/>
+      <!-- Reflector -->
+      <rect x="5" y="5" width="90" height="10" fill="#fcbf49" opacity="0.3" rx="2"/>
+      <rect x="5" y="85" width="90" height="10" fill="#fcbf49" opacity="0.3" rx="2"/>
+      <rect x="5" y="15" width="10" height="70" fill="#fcbf49" opacity="0.3" rx="2"/>
+      <rect x="85" y="15" width="10" height="70" fill="#fcbf49" opacity="0.3" rx="2"/>
+    </g>
+    
+    <text x="140" y="75" font-family="Consolas, monospace" font-size="11" fill="#fed9a1">17×17 assemblies</text>
+    <text x="140" y="95" font-family="Consolas, monospace" font-size="11" fill="#fed9a1">4 energy groups</text>
+    <text x="140" y="115" font-family="Consolas, monospace" font-size="11" fill="#fed9a1">k<tspan baseline-shift="sub" font-size="8">ref</tspan> = 1.007954</text>
+    <text x="140" y="135" font-family="Segoe UI, sans-serif" font-size="10" fill="#ffecd2">7 fuel zones + reflector</text>
+  </g>
+</svg>

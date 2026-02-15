@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320">
+  <defs>
+    <linearGradient id="stepGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4fd1c5"/>
+      <stop offset="100%" style="stop-color:#38b2ac"/>
+    </linearGradient>
+    <linearGradient id="stepGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#5a67d8"/>
+    </linearGradient>
+    <linearGradient id="stepGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f6ad55"/>
+      <stop offset="100%" style="stop-color:#ed8936"/>
+    </linearGradient>
+    <linearGradient id="stepGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fc8181"/>
+      <stop offset="100%" style="stop-color:#f56565"/>
+    </linearGradient>
+    <linearGradient id="stepGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#68d391"/>
+      <stop offset="100%" style="stop-color:#48bb78"/>
+    </linearGradient>
+    <filter id="shadowStep" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrowFlow" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a0aec0"/>
+    </marker>
+  </defs>
+  
+  <rect width="900" height="320" fill="#f7fafc"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" font-family="Segoe UI, sans-serif" font-size="20" fill="#2d3748" text-anchor="middle" font-weight="600">⚡ Solution Workflow</text>
+  
+  <!-- Step 1: Setup -->
+  <g transform="translate(30, 60)" filter="url(#shadowStep)">
+    <rect width="150" height="180" rx="10" fill="white" stroke="#4fd1c5" stroke-width="2"/>
+    <rect width="150" height="40" rx="10 10 0 0" fill="url(#stepGrad1)"/>
+    <text x="75" y="26" font-family="Segoe UI, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">1. Setup</text>
+    
+    <text x="15" y="65" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">📐 Define mesh</text>
+    <text x="15" y="85" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">📊 Set cross-sections</text>
+    <text x="15" y="105" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🔒 Boundary conditions</text>
+    <text x="15" y="125" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">⚙️ Choose RT/P orders</text>
+    
+    <rect x="10" y="140" width="130" height="30" rx="4" fill="#e6fffa"/>
+    <text x="75" y="160" font-family="Consolas, monospace" font-size="9" fill="#234e52" text-anchor="middle">NeutFEM(order, ng)</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="185" y1="150" x2="210" y2="150" stroke="#a0aec0" stroke-width="2" marker-end="url(#arrowFlow)"/>
+  
+  <!-- Step 2: Assembly -->
+  <g transform="translate(215, 60)" filter="url(#shadowStep)">
+    <rect width="150" height="180" rx="10" fill="white" stroke="#667eea" stroke-width="2"/>
+    <rect width="150" height="40" rx="10 10 0 0" fill="url(#stepGrad2)"/>
+    <text x="75" y="26" font-family="Segoe UI, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">2. Assembly</text>
+    
+    <text x="15" y="65" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🔧 Build A (RT mass)</text>
+    <text x="15" y="85" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🔧 Build B (divergence)</text>
+    <text x="15" y="105" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🔧 Build C (reaction)</text>
+    <text x="15" y="125" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🔧 Fission matrices</text>
+    
+    <rect x="10" y="140" width="130" height="30" rx="4" fill="#ebf4ff"/>
+    <text x="75" y="160" font-family="Consolas, monospace" font-size="9" fill="#3c366b" text-anchor="middle">BuildMatrices()</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="370" y1="150" x2="395" y2="150" stroke="#a0aec0" stroke-width="2" marker-end="url(#arrowFlow)"/>
+  
+  <!-- Step 3: Power Iteration -->
+  <g transform="translate(400, 60)" filter="url(#shadowStep)">
+    <rect width="150" height="180" rx="10" fill="white" stroke="#ed8936" stroke-width="2"/>
+    <rect width="150" height="40" rx="10 10 0 0" fill="url(#stepGrad3)"/>
+    <text x="75" y="26" font-family="Segoe UI, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">3. Iterate</text>
+    
+    <text x="15" y="65" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🔄 Power iteration</text>
+    <text x="15" y="85" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">⚡ Schur solve</text>
+    <text x="15" y="105" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🚀 Accelerators</text>
+    <text x="15" y="125" font-family="Segoe UI, sans-serif" font-size="10" fill="#718096" font-size="9">   (Chebyshev/Anderson)</text>
+    
+    <rect x="10" y="140" width="130" height="30" rx="4" fill="#fffaf0"/>
+    <text x="75" y="160" font-family="Consolas, monospace" font-size="9" fill="#744210" text-anchor="middle">SolveKeff()</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="555" y1="150" x2="580" y2="150" stroke="#a0aec0" stroke-width="2" marker-end="url(#arrowFlow)"/>
+  
+  <!-- Step 4: Adjoint (optional) -->
+  <g transform="translate(585, 60)" filter="url(#shadowStep)">
+    <rect width="150" height="180" rx="10" fill="white" stroke="#f56565" stroke-width="2" stroke-dasharray="5,3"/>
+    <rect width="150" height="40" rx="10 10 0 0" fill="url(#stepGrad4)"/>
+    <text x="75" y="26" font-family="Segoe UI, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">4. Adjoint</text>
+    
+    <text x="15" y="65" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">📈 Transposed system</text>
+    <text x="15" y="85" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🎯 Sensitivity calc.</text>
+    <text x="15" y="105" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🔬 Perturbation theory</text>
+    <text x="15" y="125" font-family="Segoe UI, sans-serif" font-size="10" fill="#718096">(optional)</text>
+    
+    <rect x="10" y="140" width="130" height="30" rx="4" fill="#fff5f5"/>
+    <text x="75" y="160" font-family="Consolas, monospace" font-size="9" fill="#742a2a" text-anchor="middle">SolveKeffAdjoint()</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="740" y1="150" x2="765" y2="150" stroke="#a0aec0" stroke-width="2" marker-end="url(#arrowFlow)"/>
+  
+  <!-- Step 5: Output -->
+  <g transform="translate(770, 60)" filter="url(#shadowStep)">
+    <rect width="110" height="180" rx="10" fill="white" stroke="#48bb78" stroke-width="2"/>
+    <rect width="110" height="40" rx="10 10 0 0" fill="url(#stepGrad5)"/>
+    <text x="55" y="26" font-family="Segoe UI, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">5. Output</text>
+    
+    <text x="10" y="65" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">📊 k-eff</text>
+    <text x="10" y="85" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🌊 Flux φ(x)</text>
+    <text x="10" y="105" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">➡️ Current J(x)</text>
+    <text x="10" y="125" font-family="Segoe UI, sans-serif" font-size="10" fill="#2d3748">🔥 Power</text>
+    
+    <rect x="10" y="140" width="90" height="30" rx="4" fill="#f0fff4"/>
+    <text x="55" y="160" font-family="Consolas, monospace" font-size="9" fill="#22543d" text-anchor="middle">ExportVTK()</text>
+  </g>
+  
+  <!-- Bottom info -->
+  <rect x="30" y="265" width="840" height="45" rx="8" fill="#edf2f7"/>
+  <text x="450" y="285" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">
+    💡 Linear solvers: Direct (LU, LDLT, LLT) | Iterative (CG, BiCGSTAB) | Preconditioners (IChol, ILU, Diagonal)
+  </text>
+  <text x="450" y="302" font-family="Segoe UI, sans-serif" font-size="11" fill="#4a5568" text-anchor="middle">
+    🚀 Accelerators: Chebyshev (spectral), Anderson (quasi-Newton) | Optimizations: Diagonal RT0-P0 solver, CMFD
+  </text>
+</svg>

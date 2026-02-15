@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f4f8"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="boxGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#5a67d8"/>
+    </linearGradient>
+    <linearGradient id="boxGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78"/>
+      <stop offset="100%" style="stop-color:#38a169"/>
+    </linearGradient>
+    <linearGradient id="boxGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8936"/>
+      <stop offset="100%" style="stop-color:#dd6b20"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#4a5568"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Georgia, serif" font-size="26" fill="#1a365d" text-anchor="middle" font-weight="bold">Mixed Finite Element Formulation</text>
+  <text x="450" y="65" font-family="Georgia, serif" font-size="14" fill="#4a5568" text-anchor="middle" font-style="italic">Hébert's Dual Variational Method for Neutron Diffusion</text>
+  
+  <!-- Box 1: Physical Equation -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="90" width="380" height="140" rx="10" fill="url(#boxGrad1)"/>
+    <text x="70" y="120" font-family="Segoe UI, sans-serif" font-size="14" fill="white" font-weight="600">📘 Multigroup Diffusion Equation</text>
+    
+    <rect x="60" y="135" width="360" height="85" rx="6" fill="white" fill-opacity="0.95"/>
+    <text x="240" y="165" font-family="Times New Roman, serif" font-size="16" fill="#1a365d" text-anchor="middle">
+      -∇·(D<tspan baseline-shift="super" font-size="10">g</tspan>∇φ<tspan baseline-shift="super" font-size="10">g</tspan>) + Σ<tspan baseline-shift="sub" font-size="10">r</tspan><tspan baseline-shift="super" font-size="10">g</tspan>φ<tspan baseline-shift="super" font-size="10">g</tspan> =
+    </text>
+    <text x="240" y="195" font-family="Times New Roman, serif" font-size="14" fill="#1a365d" text-anchor="middle">
+      χ<tspan baseline-shift="super" font-size="10">g</tspan> Σ<tspan baseline-shift="sub" font-size="10">h</tspan>(νΣ<tspan baseline-shift="sub" font-size="10">f</tspan>)<tspan baseline-shift="super" font-size="10">h</tspan>φ<tspan baseline-shift="super" font-size="10">h</tspan>/k + Σ<tspan baseline-shift="sub" font-size="10">h</tspan>Σ<tspan baseline-shift="sub" font-size="10">s</tspan><tspan baseline-shift="super" font-size="10">g←h</tspan>φ<tspan baseline-shift="super" font-size="10">h</tspan>
+    </text>
+  </g>
+  
+  <!-- Box 2: First Order System -->
+  <g filter="url(#shadow)">
+    <rect x="470" y="90" width="380" height="140" rx="10" fill="url(#boxGrad2)"/>
+    <text x="490" y="120" font-family="Segoe UI, sans-serif" font-size="14" fill="white" font-weight="600">📗 Mixed First-Order System</text>
+    
+    <rect x="480" y="135" width="360" height="85" rx="6" fill="white" fill-opacity="0.95"/>
+    <text x="660" y="165" font-family="Times New Roman, serif" font-size="16" fill="#276749" text-anchor="middle">
+      <tspan font-weight="bold">J</tspan> + D∇φ = 0
+    </text>
+    <text x="660" y="200" font-family="Times New Roman, serif" font-size="16" fill="#276749" text-anchor="middle">
+      ∇·<tspan font-weight="bold">J</tspan> + Σ<tspan baseline-shift="sub" font-size="10">r</tspan>φ = S
+    </text>
+    <text x="660" y="212" font-family="Segoe UI, sans-serif" font-size="9" fill="#718096" text-anchor="middle">(Fick's law + Conservation)</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M 430 160 Q 450 140 470 160" stroke="#4a5568" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Box 3: Saddle Point System -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="260" width="600" height="150" rx="10" fill="url(#boxGrad3)"/>
+    <text x="170" y="290" font-family="Segoe UI, sans-serif" font-size="14" fill="white" font-weight="600">📙 Saddle Point System (RTₖ-Pₘ Discretization)</text>
+    
+    <rect x="160" y="305" width="580" height="95" rx="6" fill="white" fill-opacity="0.95"/>
+    
+    <!-- Matrix equation -->
+    <text x="220" y="355" font-family="Times New Roman, serif" font-size="28" fill="#c05621" text-anchor="middle">[</text>
+    <text x="260" y="345" font-family="Times New Roman, serif" font-size="16" fill="#c05621" text-anchor="middle">A</text>
+    <text x="300" y="345" font-family="Times New Roman, serif" font-size="16" fill="#c05621" text-anchor="middle">B<tspan baseline-shift="super" font-size="10">T</tspan></text>
+    <text x="260" y="375" font-family="Times New Roman, serif" font-size="16" fill="#c05621" text-anchor="middle">B</text>
+    <text x="300" y="375" font-family="Times New Roman, serif" font-size="16" fill="#c05621" text-anchor="middle">C</text>
+    <text x="340" y="355" font-family="Times New Roman, serif" font-size="28" fill="#c05621" text-anchor="middle">]</text>
+    
+    <text x="380" y="355" font-family="Times New Roman, serif" font-size="28" fill="#c05621" text-anchor="middle">[</text>
+    <text x="410" y="345" font-family="Times New Roman, serif" font-size="16" fill="#c05621" text-anchor="middle" font-weight="bold">J</text>
+    <text x="410" y="375" font-family="Times New Roman, serif" font-size="16" fill="#c05621" text-anchor="middle">φ</text>
+    <text x="440" y="355" font-family="Times New Roman, serif" font-size="28" fill="#c05621" text-anchor="middle">]</text>
+    
+    <text x="475" y="355" font-family="Times New Roman, serif" font-size="20" fill="#c05621" text-anchor="middle">=</text>
+    
+    <text x="510" y="355" font-family="Times New Roman, serif" font-size="28" fill="#c05621" text-anchor="middle">[</text>
+    <text x="540" y="345" font-family="Times New Roman, serif" font-size="16" fill="#c05621" text-anchor="middle">0</text>
+    <text x="540" y="375" font-family="Times New Roman, serif" font-size="16" fill="#c05621" text-anchor="middle">f</text>
+    <text x="570" y="355" font-family="Times New Roman, serif" font-size="28" fill="#c05621" text-anchor="middle">]</text>
+    
+    <!-- Matrix definitions -->
+    <text x="650" y="332" font-family="Times New Roman, serif" font-size="11" fill="#744210" text-anchor="start">A: ∫(1/D)ψᵢ·ψⱼ</text>
+    <text x="650" y="352" font-family="Times New Roman, serif" font-size="11" fill="#744210" text-anchor="start">B: ∫φⱼ∇·ψᵢ</text>
+    <text x="650" y="372" font-family="Times New Roman, serif" font-size="11" fill="#744210" text-anchor="start">C: Σᵣ∫φᵢφⱼ</text>
+    <text x="650" y="392" font-family="Times New Roman, serif" font-size="11" fill="#744210" text-anchor="start">f: ∫Sφᵢ</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="450" y1="410" x2="450" y2="440" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="500" y="430" font-family="Segoe UI, sans-serif" font-size="10" fill="#4a5568">Schur Complement</text>
+  
+  <!-- Box 4: Solution -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="450" width="600" height="130" rx="10" fill="#2d3748"/>
+    <text x="170" y="480" font-family="Segoe UI, sans-serif" font-size="14" fill="white" font-weight="600">🎯 Schur Complement Solution</text>
+    
+    <rect x="160" y="495" width="280" height="75" rx="6" fill="#4a5568"/>
+    <text x="300" y="525" font-family="Times New Roman, serif" font-size="16" fill="#e2e8f0" text-anchor="middle">S·φ = f</text>
+    <text x="300" y="550" font-family="Times New Roman, serif" font-size="13" fill="#a0aec0" text-anchor="middle">S = C + B·A⁻¹·Bᵀ</text>
+    
+    <rect x="460" y="495" width="280" height="75" rx="6" fill="#4a5568"/>
+    <text x="600" y="520" font-family="Segoe UI, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">✓ Direct: LU, LDLT, LLT</text>
+    <text x="600" y="540" font-family="Segoe UI, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">✓ Iterative: CG, BiCGSTAB</text>
+    <text x="600" y="560" font-family="Segoe UI, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">✓ Precond: IChol, ILU, Diag</text>
+  </g>
+</svg>
