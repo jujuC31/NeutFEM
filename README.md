@@ -403,16 +403,3 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-
-**NeutFEM** — *Bringing modern finite element methods to nuclear reactor physics*
-
-Made with ⚛️ by the NeutFEM Development Team
-
-</div>
